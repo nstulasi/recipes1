@@ -58,5 +58,11 @@ ActiveRecord::Schema.define(:version => 20101122020531) do
     t.string   "occupation"
     t.string   "town"
   end
+  
+  create_table "recipes", :force => true do |t|
+    t.string   "title"
+    t.string   "ingredients"
+    t.string   "directions"
+  end
 
 end
