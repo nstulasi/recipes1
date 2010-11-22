@@ -1,0 +1,41 @@
+<h1>Edit Your Details</h1>
+<%= error_messages_for :user %>
+<% form_for :user do |f| %>
+  <p>
+    <%= f.label :first_name %>:
+    <%= f.text_field :first_name %>
+  </p>
+  <p>
+    <%= f.label :last_name %>:
+    <%= f.text_field :last_name %>
+  </p>
+  <p>
+    <%= f.label :e_mail, "E-Mail" %>:
+    <%= f.text_field :e_mail %>
+  </p>
+  <p>
+    <%= f.label :occupation %>:
+    <%= f.text_field :occupation %>
+  </p>
+  <p>
+    <%= f.label :town %>:
+    <%= f.text_field :town %>
+  </p>
+  <p>
+   <%= f.label :current_password %>:
+   <%= f.password_field :current_password %>
+  </p> 
+  <p>
+    <%= f.label :password %>:
+    <%= f.password_field :password %>
+  </p>
+  <p>
+    <%= f.label :password_confirmation %>:
+    <%= f.password_field :password_confirmation %>
+  </p>
+  
+  
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>

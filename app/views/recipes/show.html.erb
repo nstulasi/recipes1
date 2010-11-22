@@ -1,0 +1,65 @@
+<p>
+  <b>Name:</b>
+  <%= @recipe.name %>
+</p>
+
+<p>
+  <b>Ingredients:</b>
+  <%= @recipe.ingredients %>
+</p>
+
+<p>
+  <b>Directions:</b>
+  <%= @recipe.directions %>
+</p>
+
+<% unless @recipe.tag_list.empty? %>
+<p class = "tags">
+<strong>Tags:</strong>
+<%= render :partial => @recipe.tags %>
+</p>
+<% end %>
+
+
+<p>
+<b>Current Rating (<em><%= pluralize(@recipe.ratings.size, 'vote')%></em>):</b><br>
+<ul class="star-rating">
+<li class="current-rating" style="width:<%= @recipe.rating*25 %>px">
+Currently <%= @recipe.rating %>/5 Stars.
+</li>
+</ul>
+</p>
+
+<div id="rate_recipe">
+<h2>Rate This Recipe</h2>
+<ul class="star-rating">
+<li><%= link_to "1", recipe_ratings_path(@recipe, :rating => 1),
+:method => :post, :title => "1 star out of 5",
+:class => "one-star" %>
+</li>
+<li><%= link_to "2", recipe_ratings_path(@recipe, :rating => 2),
+:method => :post, :title => "2 stars out of 5",
+:class => "two-stars" %>
+</li>
+<li><%= link_to "3", recipe_ratings_path(@recipe, :rating => 3),
+:method => :post, :title => "3 stars out of 5",
+:class => "three-stars" %>
+</li>
+<li><%= link_to "4", recipe_ratings_path(@recipe, :rating => 4),
+:method => :post,:title => "4 stars out of 5",
+:class => "four-stars" %>
+</li>
+<li><%= link_to "5", recipe_ratings_path(@recipe, :rating => 5),
+:method => :post, :title => "5 stars out of 5",
+:class => "five-stars" %>
+</li>
+</ul>
+</div>
+
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+
+<%= link_to 'Edit', edit_recipe_path(@recipe) %> |
+<%= link_to 'Back', recipes_path %>

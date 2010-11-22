@@ -1,0 +1,10 @@
+Our application, Recipe-u-like, is a website in which users post their recipes, can view others' recipes and rate them. 
+A full list of the functionality implemented is given below:
+
+1)Register/Login 
+2)Add/Edit/Update/Delete/view recipes by those who created them
+3)Everybody's recipes can be viewed (but not deleted/edited)
+4)One can view people from the same town
+5)RATING: Recipes can be rated and the average rating of the recipe can be viewed. Each user can rate a recipe only once.
+6)TAGGING: Recipes can be tagged and those with the same tag can be viewed as a list.
+7)An rss feed of recipes being added can be viewed.

@@ -1,0 +1,148 @@
+body 
+{
+    font: normal small Arial, Verdana, Helvetica, sans-serif;
+    font-size: 12pt;
+  background: #fffdda;;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+#page
+{
+  width: 900px;
+  text-align: left;
+  border: solid maroon 1px;
+  margin-left:auto;
+  margin-right:auto;
+}
+#header 
+{
+  height: 110px;
+  background: url("http://farm5.static.flickr.com/4130/5194373718_41c9bca503_m.jpg") 
+        maroon no-repeat 16px 16px;
+  color: White;
+  font-size: 64pt;
+  font-weight: 900;
+  padding: 16px 16px 16px 120px;
+  text-align:center;
+}
+#content 
+{
+  background: white;
+  padding: 1em;
+}
+
+#nav
+{
+  background: #ececec;
+  border-bottom: solid maroon 1px;
+  padding: 0.5em;
+  font-weight: bold;
+}
+#nav a
+{
+  color: Maroon;
+  text-decoration:none;
+}
+
+label
+{
+  width: 150px;
+  text-align: right;
+  float: left;
+  margin-top: 4px;
+}
+
+.fieldWithErrors
+{
+  display: inline;
+  border: solid 2px maroon;
+  background-color: red;
+}
+.star-rating,
+.star-rating a:hover,
+.star-rating a:active,
+.star-rating a:focus,
+.star-rating .current-rating{
+	background: url(/images/star.gif) left -1000px repeat-x;
+}
+.star-rating{
+	position:relative;
+	width:125px;
+	height:25px;
+	overflow:hidden;
+	list-style:none;
+	margin:0;
+	padding:0;
+	background-position: left top;
+}
+.star-rating li{
+	display: inline;
+}
+.star-rating a, 
+.star-rating .current-rating{
+	position:absolute;
+	top:0;
+	left:0;
+	text-indent:-1000em;
+	height:25px;
+	line-height:25px;
+	outline:none;
+	overflow:hidden;
+	border: none;
+}
+.star-rating a:hover,
+.star-rating a:active,
+.star-rating a:focus{
+	background-position: left bottom;
+}
+.star-rating a.one-star{
+	width:20%;
+	z-index:6;
+}
+.star-rating a.two-stars{
+	width:40%;
+	z-index:5;
+}
+.star-rating a.three-stars{
+	width:60%;
+	z-index:4;
+}
+.star-rating a.four-stars{
+	width:80%;
+	z-index:3;
+}
+.star-rating a.five-stars{
+	width:100%;
+	z-index:2;
+}
+.star-rating .current-rating{
+	z-index:1;
+	background-position: left center;
+}	
+
+/* for an inline rater */
+.inline-rating{
+	display:-moz-inline-block;
+	display:-moz-inline-box;
+	display:inline-block;
+	vertical-align: middle;
+}
+
+/* smaller star */
+.small-star{
+	width:50px;
+	height:10px;
+}
+.small-star,
+.small-star a:hover,
+.small-star a:active,
+.small-star a:focus,
+.small-star .current-rating{
+	background-image: url(/images/star.gif);
+	line-height: 10px;
+	height: 10px;
+}
+
+ 
+

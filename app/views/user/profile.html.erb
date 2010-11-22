@@ -1,0 +1,23 @@
+<% if @user %>
+  <h1><%= @user.full_name %>: User Profile</h1>
+
+  <h2>Personal Details:</h2>
+  <ul>
+    <li>Screen name: <%= @user.screen_name %></li>
+    <li>Occupation: <%= @user.occupation %></li>
+    <li>Town/City: <%= @user.town %></li>
+  </ul>
+<% else %>
+  <h1>No User Profile for: <%= @screen_name %></h1>
+<% end %>
+
+<h2>Recipes</h2>
+<table>
+<% @user.recipe.each do |recipe| %>
+  <tr>
+    <td><%= recipe.name %></td>
+    
+    <td><%= link_to 'View', recipe %></td>
+  </tr>
+<% end %>
+</table>

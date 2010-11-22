@@ -1,0 +1,37 @@
+<h1>Hello, <%= @user.full_name %>!</h1>
+
+<h2>Your Details:</h2>
+<ul>
+<li>Screen name: <%= @user.screen_name %></li>
+<li>E-mail address: <%= @user.e_mail %></li>
+<li>Occupation: <%= @user.occupation %></li>
+<li>
+  Town/City: <%= @user.town %>
+  (<%= link_to "see all people in your town",
+                :controller => :user,
+                :action => :find_by_town,
+                :id => @user.town %>)
+</li>
+</ul>
+<p><%= link_to "Edit Your Details", :action => :edit %></p>
+
+<!-- <h2>Your Recipes:</h2>
+<dl>
+<% @user.recipe.each do |r| %>
+  <dt><%= r.name %></dt>
+  <dd>
+    <%= r.ingredients %><br />
+    <%= r.directions %><br />    
+    <%= link_to "Edit", 
+          :controller => :recipes, 
+          :action => :edit,
+          :id => r.id %> |
+    <%= link_to "Delete", 
+          :controller => :recipes, 
+          :action => :destroy,
+          :id => r.id %>
+  </dd>
+<% end %>
+</dl>
+
+<p><%= link_to "Add a Recipe", :controller => :recipes, :action => :new%></p> -->
